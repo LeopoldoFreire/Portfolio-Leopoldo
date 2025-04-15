@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Singularidade</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* === ESTILOS ESPECÍFICOS DA PÁGINA === */
+        .figma-container {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    
+        .figma-prototype {
+            width: 100%;
+            height: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-leopoldo">
+        <!-- Barra de navegação fixa -->
+        <div class="navigation">
+            <div class="logo">
+                <a href="index.html" class="text-wrapper"><img src="img/logo.png"></a>
+            </div>
+            <div class="menu-items">
+                <a href="index.html#sobre" class="text-wrapper">Sobre</a>
+                <a href="index.html#trabalhos" class="text-wrapper">Trabalhos</a>
+                <a href="index.html#contato" class="text-wrapper">Contato</a>
+            </div>
+        </div>
+
+        <!-- Container para as imagens -->
+        <div class="project-gallery" style="width:100%;height:100vh;padding:0">
+            <div class="gallery-grid">
+                <!-- Adicione suas 14 imagens -->
+                <img src="img/Banco Singularidade/singularidade-1.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-2.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-3.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-4.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-5.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-6.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-7.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-8.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-9.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-10.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-11.png" class="project-image">
+                <div class="figma-container">
+                    <iframe class="figma-prototype" 
+                        src="https://embed.figma.com/proto/s9MUr5hd1cXd9Ep49m3eFv/UX-Writing%3A-reda%C3%A7%C3%A3o-para-experi%C3%AAncias-digitais
+                        ---Prot%C3%B3tipo-completo-Site-do-Banco-Singularidade?page-id=2%3A2800&node-id=3-2815&viewport=1123%2C767%2C0.09&scaling=scale-down&content
+                        -scaling=fixed&embed-host=share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <img src="img/Banco Singularidade/singularidade-12.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-13.png" class="project-image">
+                <img src="img/Banco Singularidade/singularidade-14.png" class="project-image">
+                <!-- Repita para as demais imagens... -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // Pré-carregar imagens
+        window.addEventListener('load', function() {
+            const images = document.querySelectorAll('.project-image');
+            images.forEach(img => {
+                const newImg = new Image();
+                newImg.src = img.src;
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+<style>
+    /* ... estilos existentes ... */
+
+    /* ADICIONE ISSO */
+    @media (max-width: 768px) {
+        .project-gallery {
+            margin-top: 80px;
+        }
+        .figma-container {
+            height: 60vh !important;
+        }
+        .project-image {
+            width: 100vw;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .figma-container {
+            height: 40vh !important;
+        }
+    }
+</style>
+</html>

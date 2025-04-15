@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Verde</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* === ESTILOS ESPECÍFICOS DA PÁGINA === */
+        .figma-container {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    
+        .figma-prototype {
+            width: 100%;
+            height: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-leopoldo">
+        <!-- Barra de navegação fixa -->
+        <div class="navigation">
+            <div class="logo">
+                <a href="index.html" class="text-wrapper"><img src="img/logo.png"></a>
+            </div>
+            <div class="menu-items">
+                <a href="index.html#sobre" class="text-wrapper">Sobre</a>
+                <a href="index.html#trabalhos" class="text-wrapper">Trabalhos</a>
+                <a href="index.html#contato" class="text-wrapper">Contato</a>
+            </div>
+        </div>
+
+        <!-- Container para as imagens -->
+        <div class="project-gallery" style="width:100%;height:100vh;padding:0">
+            <div class="gallery-grid">
+                <!-- Adicione suas 14 imagens -->
+                <img src="img/Casa Verde/casa-verde-01.png" class="project-image">
+                <img src="img/Casa Verde/casa-verde-02.png" class="project-image">
+                <img src="img/Casa Verde/casa-verde-03.png" class="project-image">
+                <img src="img/Casa Verde/casa-verde-04.png" class="project-image">
+                <img src="img/Casa Verde/casa-verde-05.png" class="project-image">
+                <div class="figma-container">
+                    <iframe class="figma-prototype" 
+                        src="https://embed.figma.com/proto/FOZRZFzBP8DtGROZiy2lm5/Figma%3A-Refinando-o-visual-da-interface?
+                        page-id=56%3A2&node-id=56-3&p=f&viewport=631%2C499%2C0.16&scaling=scale-down&content-scaling=fixed&embed-host=share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <img src="img/Casa Verde/casa-verde-06.png" class="project-image">
+                <!-- Repita para as demais imagens... -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // Pré-carregar imagens
+        window.addEventListener('load', function() {
+            const images = document.querySelectorAll('.project-image');
+            images.forEach(img => {
+                const newImg = new Image();
+                newImg.src = img.src;
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+<style>
+    /* ... estilos existentes ... */
+
+    /* ADICIONE ISSO */
+    @media (max-width: 768px) {
+        .project-gallery {
+            margin-top: 80px;
+        }
+        .figma-container {
+            height: 60vh !important;
+        }
+        .project-image {
+            width: 100vw;
+            
+        }
+    }
+
+    @media (max-width: 480px) {
+        .figma-container {
+            height: 40vh !important;
+        }
+    }
+</style>
+</html>
