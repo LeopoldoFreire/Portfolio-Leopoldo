@@ -811,6 +811,9 @@ body {
         font-size: 16px;
         margin-right: auto;
     }
+    .header-section{
+        padding-right:0;
+    }
     
     .portfolio-leopoldo .text-wrapper {
         font-size: 15px;
